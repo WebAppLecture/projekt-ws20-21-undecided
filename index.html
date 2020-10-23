@@ -1,8 +1,51 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="src/css/main.css">
-    </head>
-    <body>
-    </body>
-    <script type="module" src="src/js/index.js"></script>
+ <head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="src/css/main.css"/>
+ </head>
+ <body>
+  <div class="game">
+   <div class="controls">
+    <button id="reset">Reset</button>
+    <div class="flex-column">
+     <span>Shape:</span>
+     <select id="shape">
+      <option value=1 selected>Rectangle</option>
+      <option value=2>Ellipse</option>
+     </select>
+    </div>
+    <div class="flex-column">
+     <span>Rows: <span id="rows-value"></span></span>
+     <div class="flex-row">
+      <span id="rows-min"></span>
+      <input type="range" id="rows" value="10" min="2" max="20" step="1"/>
+      <span id="rows-max"></span>
+     </div>
+    </div>
+    <div class="flex-column">
+     <span>Columns: <span id="cols-value"></span></span>
+     <div class="flex-row">
+      <span id="cols-min"></span>
+      <input type="range" id="cols" value="10" min="2" max="40" step="1"/>
+      <span id="cols-max"></span>
+     </div>
+    </div>
+    <div class="flex-column">
+     <span>Bombs: <span id="bombs-value"></span>%</span>
+     <div class="flex-row">
+      <span id="bombs-min"></span>
+      <input type="range" id="bombs" value="10" min="1" max="80" step="1"/>
+      <span id="bombs-max"></span>
+     </div>
+    </div>
+    <div class="flex-column">
+     <span>Time:</span>
+     <span id="time">0</span>
+    </div>
+   </div>
+   <span id="outcome" class="outcome"></span>
+   <div class="board"></div>
+  </div>
+ </body>
+ <script type="module" src="src/js/index.js"></script>
 </html>
